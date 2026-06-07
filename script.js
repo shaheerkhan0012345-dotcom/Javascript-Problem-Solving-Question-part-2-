@@ -201,3 +201,65 @@ console.log(avg);
 
 
 
+
+// 13. Remove Duplicates
+
+let arr = [1,1,2,3,3,4,5]
+
+let unique = [];
+
+
+for(let i = 0; i < arr.length;i++){
+
+    if(!unique.includes(arr[i]))
+        { unique.push(arr[i])
+
+        }
+}
+
+console.log(unique);
+
+
+
+
+
+
+// 14. Second Largest Number
+
+let arr = [10,30,50,40,80,100]
+
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+
+for(let i=0; i < arr.length; i++){
+     if(arr[i] > largest){
+        secondLargest = largest;
+        largest = arr[i];
+     }
+     else if(arr[i] > secondLargest && arr[i] !==largest){
+        secondLargest = arr[i];
+
+     }
+}
+
+console.log(secondLargest);
+console.log(largest)
+
+
+
+// 15. Palindrome Check
+
+let name = "madam"
+
+let reversed = "";
+
+for(let i = name.length -1 ; i >=0; i--){
+        reversed += name[i];   
+}
+
+if( name === reversed){
+     console.log("Polidrome")
+}else{
+    console.log("Not Polidrome")
+}
